@@ -1,0 +1,19 @@
+---
+tabTrigger: 
+scope: source.vhdl
+description: VHDL header
+---
+--------------------------------------------------------------------------------
+--
+--                   Copyright (c) ${1:2018} Texas Instruments
+--                      TI Confidential - NDA Restrictions
+--
+-- DESCRIPTION   ${2:DESCRIPTION}
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+$0

@@ -1,0 +1,18 @@
+{
+  
+  "extensions": ["vhd", "vhdl","vho"],
+
+  "vhdl.instance_as_snippet"     : false,  // Module instantiation is a snippets, with entry at each port
+  "vhdl.instance_prefix"         : "i_",  // Prefix to the module instantiation name
+  "vhdl.instance_suffix"         : "",    // Suffix to the module instantiation name
+
+  "vhdl.generic_fill"            : true,  // On module instantiation with generics user is asked a value for each generic
+  "vhdl.generic_explicit"        : true,  // Control if generic settings are explicit (appears in module instantiation even when default is used)
+
+  "vhdl.autoconnect"             : true,  // Control if signals are created and connected in module instantiation
+  "vhdl.autoconnect_allow_prefix": true,  // True to expand search for signal to \w+_port
+  "vhdl.autoconnect_allow_suffix": true,  // True to expand search for signal to port_\w+
+  "vhdl.autoconnect_port_prefix" : [],    // List of prefix to remove from the port before looking for a signal connection
+  "vhdl.autoconnect_port_suffix" : [] ,   // List of suffix to remove from the port before looking for a signal connection
+
+}

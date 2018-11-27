@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"http_proxy": "webproxy.ext.ti.com:80",
+	"https_proxy": "webproxy.ext.ti.com:80",
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"BetterSnippetManager",
+		"Column Select",
+		"Package Control",
+		"SaneSnippets",
+		"SideBarEnhancements",
+		"SideBarTools",
+		"Smart VHDL",
+		"Verilog"
+	]
+}

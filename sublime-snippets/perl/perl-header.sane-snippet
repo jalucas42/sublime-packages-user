@@ -1,0 +1,40 @@
+---
+tabTrigger: 
+scope: source.perl
+description: Perl header
+---
+#!/data/dlpasic/linux64/perl-5.22.0/bin/perl
+#############################################################################
+#                    
+#                    Copyright (c) ${1:2018} Texas Instruments
+#                       TI Confidential - NDA Restrictions
+# 
+#  DESCRIPTION
+#
+#    ${2:DESCRIPTION_GOES_HERE}
+# 
+#############################################################################
+
+# Setup include paths for this Perl version.  This should avoid issues when this
+# script is used in a later project with different Perl version in the path.
+BEGIN {
+  @INC = qw(
+    .
+    /home/a0866383/perl_lib/lib/5.22.0/x86_64-linux
+    /home/a0866383/perl_lib/lib/5.22.0
+    /home/a0866383/perl_lib/lib/site_perl/5.22.0/x86_64-linux
+    /home/a0866383/perl_lib/lib/site_perl/5.22.0
+    /data/dlpasic/linux64/perl-5.22.0/lib/site_perl/5.22.0/x86_64-linux
+    /data/dlpasic/linux64/perl-5.22.0/lib/site_perl/5.22.0
+    /data/dlpasic/linux64/perl-5.22.0/lib/5.22.0/x86_64-linux
+    /data/dlpasic/linux64/perl-5.22.0/lib/5.22.0
+  );
+}
+
+use strict;
+use warnings;
+use Carp;
+
+\$| = 1; # Autoflush
+
+$0
