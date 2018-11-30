@@ -7,14 +7,12 @@
 	"draw_white_space": "selection",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
-	"font_size": 10,
+	"font_size": 8,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"SideBarEnhancements",
-		"sublime-clearcase",
 		"Vintage"
 	],
 	"open_files_in_new_window": false,

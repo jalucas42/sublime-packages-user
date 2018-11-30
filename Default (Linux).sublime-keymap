@@ -1,4 +1,21 @@
 [
-{ "keys": ["ctrl+shift+o"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} }
-  
+  //{ "keys": ["ctrl+shift+o"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
+  { "keys": ["ctrl+w"], "command": "unbound" },
+  { "keys": ["ctrl+shift+s"], "command": "save" },
+  { "keys": ["ctrl+w"], "command": "find_under_expand" },
+
+  // Redefine word-jumping to be "normal".  Namely that ctrl+right jumps to beginning
+  // of next word (like every other text editor) rather than end of word.
+  // Use CTRL+ALT modifier to jump to end of word (legacy Sublime behavior).
+  { "keys": ["ctrl+left"], "command": "move", "args": {"by": "words", "forward": false} },
+  { "keys": ["ctrl+right"], "command": "move", "args": {"by": "words", "forward": true} },
+  { "keys": ["ctrl+alt+right"], "command": "move", "args": {"by": "word_ends", "forward": true} },
+  { "keys": ["ctrl+alt+left"], "command": "move", "args": {"by": "word_ends", "forward": false} },
+  { "keys": ["ctrl+shift+left"], "command": "move", "args": {"by": "words", "forward": false, "extend": true} },
+  { "keys": ["ctrl+shift+right"], "command": "move", "args": {"by": "words", "forward": true, "extend": true} },
+  { "keys": ["ctrl+shift+alt+right"], "command": "move", "args": {"by": "word_ends", "forward": true, "extend": true} },
+  { "keys": ["ctrl+shift+alt+left"], "command": "move", "args": {"by": "word_ends", "forward": false, "extend": true} },
+
+  // TODO: ctrl+up/down - similar to word jumping above, only with lines.
+
 ]

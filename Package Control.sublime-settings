@@ -7,9 +7,12 @@
 	],
 	"installed_packages":
 	[
+		"Alignment",
 		"BetterSnippetManager",
 		"Column Select",
+		"Keymaps",
 		"Package Control",
+		"PackageResourceViewer",
 		"SaneSnippets",
 		"SideBarEnhancements",
 		"SideBarTools",
