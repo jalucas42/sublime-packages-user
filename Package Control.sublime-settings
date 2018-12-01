@@ -1,7 +1,7 @@
 {
 	"bootstrapped": true,
-	"http_proxy": "webproxy.ext.ti.com:80",
-	"https_proxy": "webproxy.ext.ti.com:80",
+	//"http_proxy": "webproxy.ext.ti.com:80",
+	//"https_proxy": "webproxy.ext.ti.com:80",
 	"in_process_packages":
 	[
 	],
@@ -10,6 +10,7 @@
 		"Alignment",
 		"BetterSnippetManager",
 		"Column Select",
+		"Extract Sublime Package",
 		"Keymaps",
 		"Package Control",
 		"PackageResourceViewer",

@@ -13,6 +13,9 @@
 	"hot_exit": false,
 	"ignored_packages":
 	[
+		"sublime-clearcase",
+		"sublime-non-virtual-space",
+		"vhdl",
 		"Vintage"
 	],
 	"open_files_in_new_window": false,
