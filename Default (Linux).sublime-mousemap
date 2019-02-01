@@ -66,6 +66,13 @@
     "press_args": {"by": "lines", "subtractive": true}
   },
 
+  // Drag select by paragraphs
+  {
+    "button": "button1", "count": 4,
+    "press_command": "expand_selection_to_paragraph",
+    "press_args": {"by": "lines"}
+  },
+
   // Column select
   {
     "button": "button2", "modifiers": ["shift"],

@@ -7,16 +7,30 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Alignment",
+		"AlignTab",
 		"BetterSnippetManager",
 		"Column Select",
+		"Expand Selection to Quotes",
+		"ExpandRegion",
 		"Keymaps",
+		"Origami",
 		"Package Control",
 		"PackageResourceViewer",
+		"Paste as Column",
 		"SaneSnippets",
 		"SideBarEnhancements",
 		"SideBarTools",
-		"Smart VHDL",
+		"SortTabs",
+		"SublimeLinter",
+		"SublimeLinter-contrib-perl",
+		"SublimeLinter-contrib-xvhdl",
+		"Theme - Afterglow",
+		"Theme - Asphalt",
+		"Theme - Brogrammer",
+		"Theme - Spacegray",
+		"Undo Close Tab",
 		"Verilog"
 	]
 }

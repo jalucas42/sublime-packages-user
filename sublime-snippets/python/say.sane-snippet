@@ -1,0 +1,6 @@
+---
+tabTrigger: say
+scope: source.python
+description: Print variable and name
+---
+print("${1}: " + str(${1}))$0

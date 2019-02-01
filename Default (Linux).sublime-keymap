@@ -2,7 +2,11 @@
   //{ "keys": ["ctrl+shift+o"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
   { "keys": ["ctrl+w"], "command": "unbound" },
   { "keys": ["ctrl+shift+s"], "command": "save" },
-  { "keys": ["ctrl+w"], "command": "find_under_expand" },
+
+  { "keys": ["f10"], "command": "alignment" },
+
+  // Apparently ctrl+f4 is not bind-able under linux or VNC - bummer.
+  { "keys": ["shift+f4"], "command": "close_file" }, 
 
   // Redefine word-jumping to be "normal".  Namely that ctrl+right jumps to beginning
   // of next word (like every other text editor) rather than end of word.
@@ -17,5 +21,17 @@
   { "keys": ["ctrl+shift+alt+left"], "command": "move", "args": {"by": "word_ends", "forward": false, "extend": true} },
 
   // TODO: ctrl+up/down - similar to word jumping above, only with lines.
+  { "keys": ["ctrl+up"], "command": "move_by_paragraph", "args": {"forward": false, "extend": false} },
+  { "keys": ["ctrl+down"], "command": "move_by_paragraph", "args": {"forward": true, "extend": false} },
 
+  // The default Alignment binding of ctrl+alt+a doesn't work in Linux.
+  { "keys": ["alt+a"], "command": "alignment", },
+
+  // Grab SUPER+L and do nothing.  Otherwise locking a Windows
+  // terminal will type an 'l' in sublime.
+  { "keys": ["super+l"], "command": "unbound", },
+
+  {"keys": ["f12"], "command": "vhdl_align", "context": [{ "key": "selector", "operator": "equal", "operand": "source.vhdl", }, ], },
+	{"keys": ["alt+up"], "command": "expand_region"},
+	{"keys": ["alt+down"], "command": "expand_region", "args": {"undo": true }, "context": [{"key": "expand_region_soft_undo"} ] },
 ]
