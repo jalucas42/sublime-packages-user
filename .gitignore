@@ -8,3 +8,5 @@ Package Control\.user-ca-bundle
 Package Control\.cache
 
 *.sane.sublime-snippet
+
+oscrypto-ca-bundle.crt

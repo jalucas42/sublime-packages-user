@@ -1,23 +1,33 @@
 {
 	"bootstrapped": true,
-	//"http_proxy": "webproxy.ext.ti.com:80",
-	//"https_proxy": "webproxy.ext.ti.com:80",
 	"in_process_packages":
 	[
 	],
 	"installed_packages":
 	[
 		"Alignment",
+		"AlignTab",
 		"BetterSnippetManager",
+		"Blame Explorer",
 		"Column Select",
+		"DeleteBlankLines",
+		"EasyDiff",
+		"ExpandRegion",
 		"Extract Sublime Package",
+		"FileDiffs",
 		"Keymaps",
+		"Nginx Log Highlighter",
+		"Origami",
 		"Package Control",
 		"PackageResourceViewer",
+		"Paste as Column",
+		"PHP-Twig",
 		"SaneSnippets",
+		"Search in Project",
 		"SideBarEnhancements",
 		"SideBarTools",
-		"Smart VHDL",
+		"SnippetX",
+		"SortTabs",
 		"Verilog"
 	]
 }

@@ -1,0 +1,17 @@
+// Settings in here override those in "EasyDiff/easy_diff.sublime-settings",
+
+{
+    // Show external options (options to send files to external diff tool)
+    "show_external": true,
+
+    // External diff tool path (absolute)
+    "external_diff": "C:/Program Files/KDiff3/kdiff3.exe",
+
+    // Do not perform a version check on files
+    // when evaluating whether version control
+    // commands are enabled.  May avoid slowing
+    // down context menu draw in large version
+    // controlled projects.
+    "skip_version_check_on_is_enabled": false,
+
+}

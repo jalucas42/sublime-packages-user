@@ -1,0 +1,16 @@
+[
+  { "keys": ["f12"], "command": "vhdl_align" },
+  //"keys": ["ctrl+up"], "command": "move_by_paragraph", "args": { "forward": false, "extend": false, "by": "paragraphs"} },
+  //"keys": ["ctrl+down"], "command": "move_by_paragraph", "args": { "forward": true, "extend": false, "by": "paragraphs"} },
+  //"keys": ["ctrl+alt+up"], "command": "move_by_paragraph", "args": { "forward": false, "extend": false, "by": "paragraph_ends"} },
+  //"keys": ["ctrl+alt+down"], "command": "move_by_paragraph", "args": { "forward": true, "extend": false, "by": "paragraph_ends"} },
+
+  { "keys": ["alt+up"], "command": "expand_region" },
+  { "keys": ["alt+down"], "command": "expand_region", "args": {"undo": true}, "context": [{ "key": "expand_region_soft_undo" }] },
+  
+  { "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" },
+  
+  { "keys": ["f10"], "command": "alignment" },
+  { "keys": ["ctrl+f10"], "command": "align_tab", "args": {"live_preview" : true} },
+
+]

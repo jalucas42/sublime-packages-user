@@ -1,0 +1,30 @@
+[
+    { "caption": "-" },
+    {
+        "caption": "Sort Tabs By...",
+        "children":
+        [
+            {
+                "caption": "Name",
+                "command": "sort_tabs_by_name"
+            },
+            {
+                "caption": "File Path",
+                "command": "sort_tabs_by_file_path"
+            },
+            {
+                "caption": "Type",
+                "command": "sort_tabs_by_type"
+            },
+            {
+                "caption": "Date",
+                "command": "sort_tabs_by_date"
+            },
+            {
+                "caption": "Last Activation",
+                "command": "sort_tabs_by_last_activation"
+            }
+        ]
+    },
+    { "caption": "-" }
+]
