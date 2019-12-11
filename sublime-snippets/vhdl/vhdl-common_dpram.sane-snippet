@@ -1,0 +1,35 @@
+---
+description: COMMON_DPRAM instance
+tabTrigger:  i_common_dpram
+scope:       source.vhdl meta.block.architecture
+---
+  $0i_common_dpram_${1:name} : common_dpram
+    GENERIC MAP (
+      --FPGA_INIT_FILE                    => ""                              , -- Filename of init file (FPGA-ONLY)
+      ADDR_WIDTH                        => ${4:ADDR_WIDTH}                      , -- Bit width of address bus
+      DATA_WIDTH                        => ${5:DATA_WIDTH}                      , -- Bit width of data bus
+      DEPTH                             => ${6:DEPTH}                           , -- Depth of memory
+      GEOMETRY                          => 1                               , -- Placeholder for structural RAM instances
+      ADDR_LIMIT                        => 0                               , -- Address limiter assertion enable
+      DBLCLK                            => 0                               , -- Clocking type specifier
+      SYNC                              => ${7}                          -- Clock relationship specifier
+    )
+    PORT MAP (
+      clk_gd                            => '0'                             ,
+      -- Port A
+      clk_ga                            => clk_${2:ga}                          , -- Port A clock
+      in_awrite_enz_ga                  => mem0_write_enz_${2}               , -- Port A write enable control
+      in_aread_enz_ga                   => mem0_read_enz_${2}                , -- Port A read enable control
+      in_aaddr_ga                       => mem0_addr_${2}                    , -- Port A address bus
+      in_awdata_ga                      => mem0_wdata_${2}                   , -- Port A write data bus
+      cdp_aread_enz_gaq                 => OPEN                            , -- Delayed Port A read enable control (1 clock delay)
+      cdp_ardata_gga                    => mem0_rdata_${2}                   , -- Port A read data bus
+      -- Port B
+      clk_gb                            => clk_${3:gb}                          , -- Port B clock
+      in_bwrite_enz_gb                  => mem1_write_enz_${3}               , -- Port B write enable control
+      in_bread_enz_gb                   => mem1_read_enz_${3}                , -- Port B read enable control
+      in_baddr_gb                       => mem1_addr_${3}                    , -- Port B address bus
+      in_bwdata_gb                      => mem1_wdata_${3}                   , -- Port B write data bus
+      cdp_bread_enz_gbq                 => OPEN                            , -- Delayed Port B read enable control (1 clock delay)
+      cdp_brdata_ggb                    => mem1_rdata_${3}                     -- Port B read data bus
+    );

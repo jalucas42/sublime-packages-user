@@ -1,0 +1,18 @@
+---
+description: C header file template
+tabTrigger:  
+scope:       source.c++
+---
+////////////////////////////////////////////////////////////////////////////
+//
+//                   Copyright (c) 2013 Texas Instruments
+//                    TI Confidential - NDA Restrictions
+//
+// DESCRIPTION   ${2:<description>}
+//
+////////////////////////////////////////////////////////////////////////////
+
+#ifndef __${1:filename}_h__
+#define __${1:filename}_h__
+
+#endif // __${1:filename}_h__

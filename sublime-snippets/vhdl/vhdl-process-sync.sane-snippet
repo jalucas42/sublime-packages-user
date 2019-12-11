@@ -1,18 +1,18 @@
 ---
-tabTrigger: proc_async
+tabTrigger: proc_sync
 scope: source.vhdl, meta.block.architecture
-description: VHDL clocked process - async reset
+description: VHDL clocked process - sync reset
 ---
 
   ------------------------------------------------------------------
   -- ${3:Description}
   ------------------------------------------------------------------
-  proc_${1:name} : PROCESS (clk_${2:g}, arstz_${2}q)
+  proc_${1:name} : PROCESS (clk_${2:g})
   BEGIN
-    IF (arstz_${2}q = '0') THEN
-
-    ELSIF RISING_EDGE(clk_${2}) THEN
-
+    IF RISING_EDGE(clk_${2}) THEN
+      IF (arstz_${2}q = '0') THEN
+      ELSE
+      END IF;
     END IF;
   END PROCESS proc_${1};
 $0

@@ -1,0 +1,22 @@
+---
+description: SYNCL instance
+tabTrigger:  i_syncl
+scope:       source.vhdl meta.block.architecture
+---
+  i_syncl_${1:name} : syncl
+    GENERIC MAP (
+      OUTPUT_LEVEL_ON_RESET             => 0                               ,
+      NUM_DROPPED_CLKS_GD               => 0                               ,
+      SPREAD_COMP_GD                    => 0                                
+    )
+    PORT MAP (
+      -- Source domain
+      in_source_gs                      => ${3:in_source_gs}                    ,
+      
+      -- Dest domain
+      arstz_gdq                         => arstz_${2:gd}q                       ,
+      clk_gd                            => clk_${2:gd}                          ,
+      syncl_output_gdq                  => ${4:syncl_output_gdq}                 
+    );
+
+$0

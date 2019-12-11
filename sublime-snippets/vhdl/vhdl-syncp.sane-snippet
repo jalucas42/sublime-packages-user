@@ -4,12 +4,12 @@ tabTrigger:  i_syncp
 scope:       source.vhdl meta.block.architecture
 ---
   i_syncp_${1:name} : syncp
-  PORT MAP (
-    clk_gs          => clk_${2:gs},
-    arstz_gdq       => arstz_${3:gd}q,
-    clk_gd          => clk_$3,
-    in_source_gs    => $1_$2${4:q},
-    syncp_output_gd => $1_$3${5:q}
-  );
+    PORT MAP (
+      clk_gs                            => clk_${2:gs}            ,
+      arstz_gdq                         => arstz_${3:gd}q         ,
+      clk_gd                            => clk_$3                 ,
+      in_source_gs                      => $1_$2${4:q}            ,
+      syncp_output_gd                   => $1_$3${5:q}
+    );
 
 $0

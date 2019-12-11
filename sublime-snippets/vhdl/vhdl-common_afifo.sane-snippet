@@ -1,0 +1,46 @@
+---
+description: COMMON_AFIFO instance
+tabTrigger:  i_common_afifo
+scope:       source.vhdl meta.block.architecture
+---
+
+  $0i_common_afifo_${1:name} : common_afifo
+  GENERIC MAP (
+    FIFO_DEPTH          => ${4:FIFO_DEPTH}, 
+    FIFO_ADDR_WIDTH     => ${5:FIFO_ADDR_WIDTH}, 
+    FIFO_DATA_WIDTH     => ${6:'LENGTH}, 
+    GEOMETRY            => 1 
+  )
+  PORT MAP (
+    -- Write side
+    clk_gw              => clk_${2:gw}, 
+    arstz_gwq           => arstz_${2}q, 
+    in_w_flush_gw       => , 
+    in_w_ae_lvl_gw      => (OTHERS => '0'), 
+    in_w_af_lvl_gw      => (OTHERS => '0'), 
+    in_w_reqz_gw        => , 
+    in_w_data_gw        => , 
+    afifo_w_flushing_gw => OPEN, 
+    afifo_w_empty_gwq   => OPEN, 
+    afifo_w_aempty_gwq  => OPEN, 
+    afifo_w_afull_gwq   => OPEN, 
+    afifo_w_full_gwq    => OPEN, 
+    afifo_w_word_cnt_gwq=> OPEN, 
+    afifo_w_err_gwq     => OPEN, 
+
+    -- Read size
+    clk_gr              => clk_${3:gr}, 
+    arstz_grq           => arstz_${3}q, 
+    in_r_flush_gr       => , 
+    in_r_ae_lvl_gr      => (OTHERS => '0'), 
+    in_r_af_lvl_gr      => (OTHERS => '0'), 
+    in_r_reqz_gr        => , 
+    afifo_r_flushing_gr => OPEN, 
+    afifo_r_empty_grq   => OPEN, 
+    afifo_r_aempty_grq  => OPEN, 
+    afifo_r_afull_grq   => OPEN, 
+    afifo_r_full_grq    => OPEN, 
+    afifo_r_word_cnt_grq=> OPEN, 
+    afifo_r_data_gr     => OPEN, 
+    afifo_r_err_grq     => OPEN
+  );

@@ -1,0 +1,32 @@
+---
+description: COMMON_SFIFO instance
+tabTrigger:  i_common_sfifo
+scope:       source.vhdl meta.block.architecture
+---
+
+  $0i_common_sfifo_${1:name} : common_sfifo
+  GENERIC MAP (
+    FIFO_DEPTH          => ${4:FIFO_DEPTH}, 
+    FIFO_ADDR_WIDTH     => ${5:FIFO_ADDR_WIDTH}, 
+    FIFO_DATA_WIDTH     => ${6:'LENGTH}, 
+    DBLCLK              => 0, 
+    GEOMETRY            => 1 
+  )
+  PORT MAP (
+    clk_gd              => '0',
+    clk_g               => clk_${2:g}, --  fifo clock
+    arstz_gq            => arstz_${2}q, --  fifo reset (active low)
+    in_w_reqz_g         => , --  write request (active high)  
+    in_r_reqz_g         => , --  read request (active high)   
+    in_flush_g          => , --  fifo flush (active high)     
+    in_ae_lvl_g         => (OTHERS => '0')          , --  almost empty level
+    in_af_lvl_g         => (OTHERS => '0')          , --  almost full level
+    in_w_data_g         => , --  write data
+    sfifo_r_data_g      => OPEN, --  read data
+    sfifo_full_gq       => OPEN, --  fifo full flag
+    sfifo_afull_gq      => OPEN, --  fifo almost full flag
+    sfifo_aempty_gq     => OPEN, --  fifo almost empty flag
+    sfifo_empty_gq      => OPEN, --  fifo empty flag
+    sfifo_err_gq        => OPEN, --  fifo error flag
+    sfifo_word_cnt_gq   => OPEN--  fifo word count
+  );

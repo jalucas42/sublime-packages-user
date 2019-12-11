@@ -4,6 +4,7 @@
   { "keys": ["ctrl+shift+s"], "command": "save" },
 
   { "keys": ["f10"], "command": "alignment" },
+  { "keys": ["ctrl+f10"], "command": "align_tab", "args": {"live_preview" : true} },
 
   // Apparently ctrl+f4 is not bind-able under linux or VNC - bummer.
   { "keys": ["shift+f4"], "command": "close_file" }, 
@@ -34,4 +35,5 @@
   {"keys": ["f12"], "command": "vhdl_align", "context": [{ "key": "selector", "operator": "equal", "operand": "source.vhdl", }, ], },
 	{"keys": ["alt+up"], "command": "expand_region"},
 	{"keys": ["alt+down"], "command": "expand_region", "args": {"undo": true }, "context": [{"key": "expand_region_soft_undo"} ] },
+
 ]
