@@ -1,0 +1,11 @@
+---
+description: (from Textpad) use File::*
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+use File::Path;
+use File::Copy;
+use File::Spec;
+use File::Basename;
+
+\\^

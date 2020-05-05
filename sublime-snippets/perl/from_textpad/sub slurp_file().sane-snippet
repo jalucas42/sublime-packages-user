@@ -1,0 +1,28 @@
+---
+description: (from Textpad) sub slurp_file()
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+###############################################################################
+#
+# SLURP_FILE()
+#
+# This sub shall read a file's contents and return them. 
+#
+# Return value is an array (split on \n) when called in list context, else 
+# a scalar string. 
+#
+###############################################################################
+sub slurp_file {
+  my $filename = shift;
+  
+  my $contents = "";
+
+  open(FILE, "<", $filename) or croak "Could not open '$filename' for read";
+  $contents .= $_ while (<FILE>);
+  close(FILE);
+
+  return wantarray ? (split(/\n/, $contents)) : $contents;
+}
+
+

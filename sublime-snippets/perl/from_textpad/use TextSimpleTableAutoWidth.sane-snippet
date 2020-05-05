@@ -1,0 +1,17 @@
+---
+description: (from Textpad) use Text::SimpleTable::AutoWidth;
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+use Text::SimpleTable::AutoWidth;
+$Text::SimpleTable::AutoWidth::WIDTH_LIMIT = 3000;
+
+my $t1 = Text::SimpleTable::AutoWidth->new();
+$t1->row( 'foobarbaz', 'yadayadayada' );
+print $t1->draw;
+
+my $t2 = Text::SimpleTable::AutoWidth->new();
+$t2->captions( ['Foo', 'Bar'] );
+$t2->row( 'foobarbaz', 'yadayadayada' );
+$t2->row( 'barbarbarbarbar', 'yada' );
+print $t2->draw;

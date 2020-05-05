@@ -1,0 +1,53 @@
+---
+description: (from Textpad) _new_package
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+## ############################################################################
+##             TEXAS INSTRUMENTS PROPRIETARY INFORMATION
+##
+##  (c) Copyright, Texas Instruments Incorporated, 2001-2011.
+##      All Rights Reserved.
+##
+##  Property of Texas Instruments Incorporated. Restricted Rights -
+##  Use, duplication, or disclosure is subject to restrictions set
+##  forth in TI's program license agreement and associated documentation.
+##
+## TITLE         
+##
+## FILE          
+##
+## CREATED       
+##
+## DESIGNER      Jonathan Lucas - a0866383
+##
+## DESCRIPTION   
+##
+## ASSUMPTIONS
+##
+## ISSUES
+##
+## ############################################################################
+
+package CMT;
+
+use strict;
+use warnings;
+use Carp;
+
+use Exporter 'import'; # gives you Exporter's import() method directly
+our @EXPORT    = qw( &test );
+our @EXPORT_OK = qw();
+
+
+sub test {
+  print "Hello\n";
+}
+
+
+1; # Each package must return true
+
+## ===========================
+## CHANGE HISTORY
+## $Log$
+##

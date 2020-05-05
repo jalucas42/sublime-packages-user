@@ -1,0 +1,6 @@
+---
+description: VHDL assertion
+tabTrigger:  assert
+scope:       source.vhdl
+---
+ASSERT ${1:FALSE} REPORT "${2:Test done}" SEVERITY ${3:FAILURE};$0

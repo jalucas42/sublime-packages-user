@@ -1,0 +1,24 @@
+---
+description: (from Textpad) use GD;
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+use GD;
+
+# Create a new 24-bit truecolor image...
+my $im = GD::Image->newTrueColor(320, 240);
+
+# Set a pixel to a given color...
+my $color = $im->colorResolve(255,127,0);
+$im->setPixel(10, 20, $color);
+
+# Get the color of a pixel...
+$color = $im->getPixel(10, 20);
+my ($r,$g,$b) = $im->rgb($color);
+
+# Write image to file...        
+my $outfilename_png = "test.png";
+open(OUTFILE, ">", $outfilename_png) or croak "Could not open $outfilename_png for write";
+binmode OUTFILE;
+print OUTFILE $im->png;
+close(OUTFILE);

@@ -1,0 +1,11 @@
+---
+description: (from Textpad) use Image::Magick;
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+use Image::Magick;
+my $image = Image::Magick->new;
+#$image->Read("input.png");
+#$image->Set('pixel[49,49]'=>'red');
+#$image->Annotate(font=>'kai.ttf', pointsize=>40, fill=>'green', text=>'my text');
+#$image->Write("output.png");

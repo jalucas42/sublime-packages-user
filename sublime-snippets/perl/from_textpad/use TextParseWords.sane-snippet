@@ -1,0 +1,9 @@
+---
+description: (from Textpad) use Text::ParseWords;
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+use Text::ParseWords;
+my @words = quotewords('\s+', 0, q{this   is "a test" of\ quotewords \"for you});
+my @words = shellwords(          q{this   is "a test" of\ quotewords \"for you});
+

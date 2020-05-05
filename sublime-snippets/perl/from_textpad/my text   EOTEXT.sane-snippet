@@ -1,0 +1,8 @@
+---
+description: (from Textpad) my $text = << 'EOTEXT';
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+my $text = << 'EOTEXT';
+Text goes here.
+EOTEXT

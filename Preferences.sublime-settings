@@ -65,16 +65,15 @@
 		"Highlighter",
 		"Smart Delete",
 		"Vintage",
-		"WrapAsYouType"
+		"WrapAsYouType",
+		"zzz A File Icon zzz"
 	],
+	"linecomments_label_indent": true,
+	"linecomments_shift_enter": true,
 	"open_files_in_new_window": false,
 	"shift_tab_unindent": true,
 	"show_line_endings": true,
 	"theme": "Adaptive.sublime-theme",
 	"use_tab_stops": true,
-	"word_wrap": false,
-
-    "linecomments_shift_enter": true,
-    "linecomments_label_indent": true,
-
+	"word_wrap": false
 }

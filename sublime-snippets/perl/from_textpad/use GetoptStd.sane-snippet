@@ -1,0 +1,20 @@
+---
+description: (from Textpad) use Getopt::Std;
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+use Getopt::Std;
+
+# Store command line args to options hash
+my %options;
+getopts('', \%options);
+
+if ($options{h}) {
+  print qq{
+  Usage: $0 [-h]
+
+    -h    Help
+
+  };
+  exit 1;
+}

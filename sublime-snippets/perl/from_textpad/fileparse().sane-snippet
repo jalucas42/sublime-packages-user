@@ -1,0 +1,6 @@
+---
+description: (from Textpad) fileparse()
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+fileparse($filepath, qr/\.[^.]*/);

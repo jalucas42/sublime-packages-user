@@ -1,0 +1,9 @@
+---
+description: (from Textpad) use Win32::Clipboard;
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+use Win32::Clipboard;
+my $CLIP = Win32::Clipboard();
+my $intext = $CLIP->Get();
+$CLIP->Set($retval);

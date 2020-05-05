@@ -1,0 +1,46 @@
+---
+description: (from Textpad) sub prompt()
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+
+#
+# Prompt for input from STDIN.  Valid types are:
+# 'd'ecimal, 'f'loat, 's'tring
+#
+sub prompt {
+  my $text = shift;
+  my $type = shift;
+
+  my $retval;
+  while (not validate_input($retval, $type)) {
+    print "${text}: ";
+    $retval = <STDIN>;
+    chomp $retval;
+  }
+
+  return $retval;
+}
+
+#
+# Paired with prompt(), will validate that the user 
+# entered the correct type.
+#
+sub validate_input {
+  my $input = shift;
+  my $type = shift;
+
+  my $retval = 0;
+
+  if ($type eq 'd') {
+    $retval = ($input =~ /^[0-9]+$/);
+  } elsif ($type eq 'f') {
+    $retval = ($input =~ /^[0-9.]+$/);
+  } elsif ($type eq 's') {
+    $retval = ($input ne '');
+  }
+
+  return $retval;
+}
+
+\\^

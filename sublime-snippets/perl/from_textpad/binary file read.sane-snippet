@@ -1,0 +1,13 @@
+---
+description: (from Textpad) binary file read
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+open(BIN, "<", $bin_filename) or croak "Could not open $bin_filename for read";
+binmode BIN;
+my $buffer;
+while ( read (BIN, $buffer, 0x10000) ) {
+  my @bytes = unpack("C*", $buffer);
+}
+croak "Problem copying: $!\n" if $!;
+\\^

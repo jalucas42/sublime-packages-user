@@ -1,0 +1,9 @@
+---
+description: (from Textpad) comment block
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+#################################################
+# Comment
+#################################################
+\\^

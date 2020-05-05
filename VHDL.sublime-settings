@@ -26,7 +26,7 @@
 
   // Define minimum widths for the alignment fields.  This can be used to give some visual consistency to independent blocks of code. 
   "vhdl.align_decl.min_qual_len"        : 0,
-  "vhdl.align_decl.min_name_len"        : 32,
+  "vhdl.align_decl.min_name_len"        : 42,
   "vhdl.align_decl.min_type_len"        : 0,
   "vhdl.align_decl.min_range_len"       : 0,
   "vhdl.align_decl.min_init_len"        : 0,

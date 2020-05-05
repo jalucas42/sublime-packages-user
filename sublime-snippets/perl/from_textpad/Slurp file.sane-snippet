@@ -1,0 +1,7 @@
+---
+description: (from Textpad) Slurp file
+tabTrigger:  lorizzle
+scope:       source.perl
+---
+    local $/; # enable localized slurp mode
+    my $text = <INFILE>
