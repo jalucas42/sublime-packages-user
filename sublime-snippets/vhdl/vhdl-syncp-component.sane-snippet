@@ -1,0 +1,21 @@
+---
+description: SYNCP component
+tabTrigger:  component
+scope:       source.vhdl meta.block.architecture
+---
+-- Include the common component declaration directly, so we don't have to worry about 
+-- which library the component package is compiled into.
+COMPONENT syncp IS 
+  GENERIC (
+    PULSE_ON_RESET                   : INTEGER := 0;
+    NUM_DROPPED_CLKS_GD              : INTEGER := 0;
+    SPREAD_COMP_GD                   : INTEGER := 0 
+  );
+  PORT (
+    clk_gs                           : IN  STD_LOGIC;
+    arstz_gdq                        : IN  STD_LOGIC;
+    clk_gd                           : IN  STD_LOGIC;
+    in_source_gs                     : IN  STD_LOGIC;
+    syncp_output_gd                  : OUT STD_LOGIC 
+  );
+END COMPONENT;

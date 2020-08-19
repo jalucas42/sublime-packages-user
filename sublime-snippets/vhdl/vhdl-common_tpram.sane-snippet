@@ -1,5 +1,5 @@
 ---
-description: COMMON_TPRAM instance
+description: COMMON_TPRAM (instance)
 tabTrigger:  i_common_tpram
 scope:       source.vhdl meta.block.architecture
 ---

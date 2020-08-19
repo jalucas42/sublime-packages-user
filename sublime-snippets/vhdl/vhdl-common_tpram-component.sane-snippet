@@ -1,0 +1,31 @@
+---
+description: COMMON_TPRAM component
+tabTrigger:  component
+scope:       source.vhdl meta.block.architecture
+---
+-- Include the common component declaration directly, so we don't have to worry about 
+-- which library the component package is compiled into.
+COMPONENT common_TPram IS 
+  GENERIC (
+    ADDR_WIDTH                       : INTEGER; -- Bit width of address bus
+    DATA_WIDTH                       : INTEGER; -- Bit width of data bus
+    DEPTH                            : INTEGER; -- Depth of memory
+    GEOMETRY                         : INTEGER; -- Placeholder for structural RAM instances
+    ADDR_LIMIT                       : INTEGER; -- Address limiter assertion enable
+    DBLCLK                           : INTEGER; -- Clocking type specifier
+    SYNC                             : INTEGER  -- Clock relationship specifier
+  );
+  PORT (
+    clk_gw                           : IN  STD_LOGIC                                  ; -- Write port clock
+    clk_gr                           : IN  STD_LOGIC                                  ; -- Read port clock
+    clk_gd                           : IN  STD_LOGIC                                  ; -- Clock for double-clocking SPram implementation
+    in_write_enz_gw                  : IN  STD_LOGIC                                  ; -- Write port enable control
+    in_read_enz_gr                   : IN  STD_LOGIC                                  ; -- Read port enable control
+    in_waddr_gw                      : IN  STD_LOGIC_VECTOR((ADDR_WIDTH - 1) DOWNTO 0); -- Write port address bus
+    in_raddr_gr                      : IN  STD_LOGIC_VECTOR((ADDR_WIDTH - 1) DOWNTO 0); -- Read port address bus
+    in_wdata_gw                      : IN  STD_LOGIC_VECTOR((DATA_WIDTH - 1) DOWNTO 0); -- Write port data bus
+    ctp_read_enz_grq                 : OUT STD_LOGIC                                  ; -- Delayed input read enable control (1 clock delay)
+    ctp_rdata_ggr                    : OUT STD_LOGIC_VECTOR((DATA_WIDTH - 1) DOWNTO 0)  -- Read port data bus
+  );
+END COMPONENT;
+$0 

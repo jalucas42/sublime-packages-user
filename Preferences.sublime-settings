@@ -54,7 +54,7 @@
 		".hg",
 		"CVS"
 	],
-	"font_size": 9,
+	"font_size": 10,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
@@ -64,9 +64,9 @@
 		"Highlight",
 		"Highlighter",
 		"Smart Delete",
+		"SublimeLinter",
 		"Vintage",
-		"WrapAsYouType",
-		"zzz A File Icon zzz"
+		"WrapAsYouType"
 	],
 	"linecomments_label_indent": true,
 	"linecomments_shift_enter": true,
